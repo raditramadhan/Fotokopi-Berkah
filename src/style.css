@@ -1,0 +1,1293 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6fa;
+  color: #263247;
+}
+
+button, input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* LOGIN */
+
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #123c69, #2878a8);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 15px 45px #0002;
+}
+
+.login-logo, .brand-logo {
+  background: #176b87;
+  color: white;
+  font-weight: bold;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+}
+
+.login-logo {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 18px;
+  font-size: 22px;
+}
+
+.login-card h1 {
+  text-align: center;
+  font-size: 25px;
+}
+
+.login-subtitle {
+  text-align: center;
+  color: #7b8796;
+  margin: 8px 0 28px;
+}
+
+.login-card label {
+  display: block;
+  margin: 15px 0 8px;
+  font-weight: bold;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #d9e0e8;
+  border-radius: 8px;
+  outline-color: #176b87;
+}
+
+.login-button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 22px;
+  background: #176b87;
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+
+.login-info {
+  margin-top: 25px;
+  padding: 15px;
+  background: #eff6f8;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.error-message {
+  color: #dc2626;
+  margin-top: 12px;
+  font-size: 13px;
+}
+
+/* LAYOUT */
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background: #173b55;
+  color: white;
+  padding: 25px 18px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.brand-logo {
+  width: 42px;
+  height: 42px;
+  background: #2493a5;
+}
+
+.brand h2 {
+  font-size: 15px;
+}
+
+.brand small {
+  color: #b8cad5;
+  font-size: 11px;
+}
+
+.menu-label {
+  font-size: 11px;
+  color: #9db4c4;
+  margin-bottom: 15px;
+}
+
+.sidebar nav {
+  display: grid;
+  gap: 8px;
+}
+
+.sidebar nav button,
+.logout-button {
+  padding: 12px;
+  text-align: left;
+  color: #d8e5ec;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+}
+
+.sidebar nav button:hover,
+.sidebar nav button.active {
+  background: #28718b;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  display: grid;
+  gap: 12px;
+  font-size: 12px;
+  color: #c3d2dc;
+}
+
+.logout-button {
+  background: #a63d42;
+  color: white;
+  text-align: center;
+}
+
+.main-content {
+  flex: 1;
+  min-width: 0;
+  padding: 30px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.topbar h1 {
+  font-size: 25px;
+}
+
+.topbar p {
+  color: #8390a0;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #dcecf0;
+  color: #176b87;
+  display: grid;
+  place-items: center;
+  font-weight: bold;
+}
+
+.user-profile small {
+  display: block;
+  color: #8290a0;
+  margin-top: 4px;
+}
+
+.welcome {
+  margin-bottom: 25px;
+}
+
+.welcome h2 {
+  font-size: 21px;
+}
+
+.welcome p {
+  color: #8390a0;
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.stat-card, .content-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px #00000008;
+}
+
+.stat-icon {
+  font-size: 25px;
+}
+
+.stat-card p {
+  color: #7c8999;
+  margin: 14px 0 8px;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  font-size: 22px;
+}
+
+.content-card h3 {
+  margin-bottom: 20px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 13px;
+}
+
+th, td {
+  padding: 14px 10px;
+  border-bottom: 1px solid #edf0f3;
+  white-space: nowrap;
+}
+
+th {
+  color: #758396;
+  background: #f8fafc;
+}
+
+.status {
+  background: #dcfce7;
+  color: #15803d;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+}
+
+@media (max-width: 1000px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .app-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .main-content {
+    padding: 18px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    align-items: flex-start;
+  }
+}
+
+
+/* HALAMAN PRODUK */
+.product-page {
+  padding: 25px;
+  color: #263238;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.product-header h2 {
+  margin: 0 0 6px;
+}
+
+.product-header p {
+  color: #777;
+  margin: 0;
+}
+
+.product-form,
+.product-table {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.product-form {
+  max-width: 500px;
+}
+
+.product-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-form input {
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-add,
+.btn-edit,
+.btn-delete,
+.btn-cancel {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-add {
+  background: #176b45;
+  color: white;
+}
+
+.btn-edit {
+  background: #e6a23c;
+  color: white;
+  margin-right: 5px;
+}
+
+.btn-delete,
+.btn-cancel {
+  background: #dc3545;
+  color: white;
+}
+
+.product-table {
+  overflow-x: auto;
+}
+
+.product-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.product-table th,
+.product-table td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.product-table th {
+  background: #f4f7f5;
+}
+
+.empty-data {
+  text-align: center !important;
+  color: #888;
+}
+
+
+/* HALAMAN LAYANAN */
+.service-page {
+  padding: 25px;
+  color: #263238;
+}
+
+.service-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.service-header h2 {
+  margin: 0 0 6px;
+}
+
+.service-header p {
+  color: #777;
+  margin: 0;
+}
+
+.service-form,
+.service-table {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.service-form {
+  max-width: 500px;
+}
+
+.service-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-form input,
+.service-form select {
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.service-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.service-btn-add,
+.service-btn-edit,
+.service-btn-delete,
+.service-btn-cancel {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.service-btn-add {
+  background: #176b45;
+  color: white;
+}
+
+.service-btn-edit {
+  background: #e6a23c;
+  color: white;
+  margin-right: 5px;
+}
+
+.service-btn-delete,
+.service-btn-cancel {
+  background: #dc3545;
+  color: white;
+}
+
+.service-table {
+  overflow-x: auto;
+}
+
+.service-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.service-table th,
+.service-table td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.service-table th {
+  background: #f4f7f5;
+}
+
+.service-empty {
+  text-align: center !important;
+  color: #888;
+}
+
+
+/* HALAMAN TRANSAKSI */
+
+.transaction-page {
+  padding: 25px;
+  color: #263238;
+}
+
+.transaction-header {
+  margin-bottom: 25px;
+}
+
+.transaction-header h2 {
+  margin: 0 0 6px;
+}
+
+.transaction-header p {
+  color: #777;
+  margin: 0;
+}
+
+.transaction-form,
+.transaction-table {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.transaction-form {
+  max-width: 100%;
+}
+
+.transaction-form h3,
+.transaction-table h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.transaction-form label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.transaction-form input,
+.transaction-form select {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.transaction-input-group {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 15px;
+}
+
+.selected-item {
+  background: #f4f7f5;
+  padding: 10px 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.selected-item p {
+  margin: 5px 0;
+}
+
+.transaction-btn-add,
+.transaction-btn-save,
+.transaction-btn-delete {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+
+.transaction-btn-add {
+  background: #176b45;
+}
+
+.transaction-btn-save {
+  background: #176b45;
+  margin-top: 20px;
+}
+
+.transaction-btn-delete {
+  background: #dc3545;
+}
+
+.transaction-table {
+  overflow-x: auto;
+}
+
+.transaction-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction-table th,
+.transaction-table td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.transaction-table th {
+  background: #f4f7f5;
+}
+
+.transaction-empty {
+  text-align: center !important;
+  color: #888;
+}
+
+.transaction-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: #f4f7f5;
+  border-radius: 8px;
+}
+
+.transaction-total strong {
+  font-size: 22px;
+  color: #176b45;
+}
+
+@media (max-width: 768px) {
+  .transaction-input-group {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .transaction-total {
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* HALAMAN MANAJEMEN STOK */
+
+.stock-page {
+  padding: 25px;
+  color: #263238;
+}
+
+.stock-header {
+  margin-bottom: 25px;
+}
+
+.stock-header h2 {
+  margin: 0 0 6px;
+}
+
+.stock-header p {
+  margin: 0;
+  color: #777;
+}
+
+.stock-statistics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.stock-stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.stock-stat-card p {
+  color: #777;
+  margin: 0 0 10px;
+}
+
+.stock-stat-card h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.stock-warning {
+  color: #e6a23c;
+}
+
+.stock-danger {
+  color: #dc3545;
+}
+
+.stock-form,
+.stock-table {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.stock-form {
+  max-width: 500px;
+}
+
+.stock-form h3 {
+  margin-top: 0;
+}
+
+.stock-form label {
+  display: block;
+  margin: 12px 0 7px;
+  font-weight: 600;
+}
+
+.stock-form input,
+.stock-form select,
+.stock-search {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.stock-form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.stock-btn-add,
+.stock-btn-save,
+.stock-btn-cancel,
+.stock-btn-edit {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.stock-btn-add,
+.stock-btn-save {
+  background: #176b45;
+}
+
+.stock-btn-add:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.stock-btn-cancel {
+  background: #dc3545;
+}
+
+.stock-btn-edit {
+  background: #e6a23c;
+}
+
+.stock-table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.stock-table-header h3 {
+  margin: 0;
+}
+
+.stock-search {
+  margin-bottom: 20px;
+}
+
+.stock-table {
+  overflow-x: auto;
+}
+
+.stock-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.stock-table th,
+.stock-table td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.stock-table th {
+  background: #f4f7f5;
+}
+
+.stock-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.stock-badge-success {
+  background: #d4edda;
+  color: #176b45;
+}
+
+.stock-badge-warning {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.stock-badge-danger {
+  background: #f8d7da;
+  color: #dc3545;
+}
+
+.stock-empty {
+  text-align: center !important;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .stock-statistics {
+    grid-template-columns: 1fr;
+  }
+
+  .stock-table-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+
+/* HALAMAN RIWAYAT TRANSAKSI */
+
+.history-page {
+  padding: 25px;
+  color: #263238;
+}
+
+.history-header {
+  margin-bottom: 25px;
+}
+
+.history-header h2 {
+  margin: 0 0 6px;
+}
+
+.history-header p {
+  color: #777;
+  margin: 0;
+}
+
+.history-statistics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.history-stat-card,
+.history-table {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.history-stat-card p {
+  color: #777;
+  margin: 0 0 10px;
+}
+
+.history-stat-card h2 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.history-revenue {
+  color: #176b45;
+}
+
+.history-table {
+  overflow-x: auto;
+}
+
+.history-table-header h3 {
+  margin-top: 0;
+}
+
+.history-search {
+  width: 100%;
+  padding: 11px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+}
+
+.history-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.history-table th {
+  background: #f4f7f5;
+}
+
+.history-btn-detail,
+.history-btn-delete,
+.history-btn-close {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  margin: 2px;
+}
+
+.history-btn-detail {
+  background: #176b45;
+}
+
+.history-btn-delete {
+  background: #dc3545;
+}
+
+.history-empty {
+  text-align: center !important;
+  color: #888;
+}
+
+.history-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+
+.history-modal-content {
+  background: white;
+  width: 100%;
+  max-width: 650px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.history-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.history-modal-header h3 {
+  margin: 0;
+}
+
+.history-close {
+  border: none;
+  background: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #777;
+}
+
+.history-detail-info {
+  background: #f4f7f5;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+}
+
+.history-detail-info p {
+  margin: 8px 0;
+}
+
+.history-detail-table {
+  overflow-x: auto;
+}
+
+.history-detail-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-detail-table th,
+.history-detail-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.history-detail-table th {
+  background: #f4f7f5;
+}
+
+.history-detail-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 18px 0;
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+}
+
+.history-detail-total strong {
+  color: #176b45;
+  font-size: 20px;
+}
+
+.history-btn-close {
+  background: #176b45;
+  margin-top: 10px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .history-statistics {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* HALAMAN LAPORAN */
+
+.report-page {
+  padding: 25px;
+  color: #263238;
+}
+
+.report-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.report-header h2 {
+  margin: 0 0 6px;
+}
+
+.report-header p {
+  color: #777;
+  margin: 0;
+}
+
+.report-filter {
+  padding: 11px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+}
+
+.report-statistics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.report-stat-card,
+.report-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.report-stat-card p {
+  color: #777;
+  margin: 0 0 10px;
+}
+
+.report-stat-card h2 {
+  color: #176b45;
+  font-size: 23px;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.report-section {
+  margin-bottom: 25px;
+}
+
+.report-section h3 {
+  margin: 0 0 20px;
+}
+
+.report-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.report-table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.report-table-wrapper th,
+.report-table-wrapper td {
+  padding: 13px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.report-table-wrapper th {
+  background: #f4f7f5;
+  white-space: nowrap;
+}
+
+.report-empty {
+  text-align: center !important;
+  color: #888;
+  padding: 25px !important;
+}
+
+@media (max-width: 1000px) {
+  .report-statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .report-statistics {
+    grid-template-columns: 1fr;
+  }
+
+  .report-page {
+    padding: 15px;
+  }
+}
+
+/* TOMBOL CETAK LAPORAN */
+
+.report-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.report-print-btn {
+  padding: 11px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #176b45;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.report-print-btn:hover {
+  background: #125536;
+}
+
+/* PENGATURAN CETAK DAN PDF */
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  .report-page,
+  .report-page * {
+    visibility: visible;
+  }
+
+  .report-page {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 10px;
+    color: black;
+    background: white;
+  }
+
+  .report-actions,
+  .report-filter {
+    display: none !important;
+  }
+
+  .report-stat-card,
+  .report-section {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    break-inside: avoid;
+  }
+
+  .report-table-wrapper {
+    overflow: visible;
+  }
+
+  .report-table-wrapper table {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .report-table-wrapper th,
+  .report-table-wrapper td {
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .report-section {
+    margin-bottom: 15px;
+  }
+}
